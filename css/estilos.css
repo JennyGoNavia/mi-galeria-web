@@ -1,0 +1,50 @@
+:root {
+  --bg: #1a1a2e;
+  --card: #ffffff;
+  --acc: #e94560;
+  --texto: #222222;
+  --sombra: rgba(0, 0, 0, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: Arial, sans-serif;
+  color: var(--texto);
+}
+
+header {
+  background-color: #16213e;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+header h1 {
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+
+header label {
+  color: #cccccc;
+  font-size: 0.9rem;
+  margin-right: 6px;
+}
+
+header input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+header input:focus
