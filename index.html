@@ -1,32 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galería de Perros</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
 
   <header>
-    <h1>Galería de Perros</h1>
+
+    <div class="logo">
+      <h1>🐶 Galería de Perros</h1>
+    </div>
+
     <nav>
-      <label for="buscar">Buscar raza</label>
-      <input id="buscar" type="text" placeholder="Ej: labrador...">
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <ul class="menu" id="menu">
+
+        <li>
+          <a href="#" id="inicio-link">Inicio</a>
+        </li>
+
+        <li class="dropdown">
+          <button class="dropdown-btn">Categorías ▼</button>
+          <ul class="dropdown-content">
+            <li><a href="#" class="categoria-link">Razas pequeñas</a></li>
+            <li><a href="#" class="categoria-link">Razas grandes</a></li>
+            <li><a href="#" class="categoria-link">Favoritos</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" id="acerca-link">Acerca</a>
+        </li>
+
+      </ul>
     </nav>
+
+    <div class="busqueda">
+      <label for="buscar">Buscar raza</label>
+      <input type="text" id="buscar" placeholder="Ej: labrador...">
+    </div>
+
   </header>
 
   <main>
-    <button id="cargar">Cargar razas</button>
-    <section id="galeria" aria-label="Galería de razas de perros">
-      <!-- las tarjetas se generan aquí -->
+
+    <!-- Sección de bienvenida (visible al inicio) -->
+    <section class="bienvenida" id="bienvenida">
+      <h2>Bienvenido a la Galería de Perros 🐾</h2>
+      <p>
+        Explora distintas razas de perros, descubre imágenes increíbles,
+        agrega favoritos y navega entre categorías.
+      </p>
     </section>
+
+    <!-- Botón cargar (visible al inicio) -->
+    <button id="cargar">Ver razas</button>
+
+    <!-- Info de paginación (oculto al inicio) -->
+    <div id="info-paginacion" style="display:none;">
+      <p id="total-razas">Total de razas: 0</p>
+      <div class="controles">
+        <button id="anterior">⬅ Anterior</button>
+        <span id="pagina-actual">Página 1</span>
+        <button id="siguiente">Siguiente ➡</button>
+      </div>
+    </div>
+
+    <!-- Galería (vacía al inicio) -->
+    <section id="galeria" aria-label="Galería de perros"></section>
+
   </main>
 
   <footer>
-    <p>Hecho por mí · Datos de <a href="https://dog.ceo/dog-api/" target="_blank">Dog CEO API</a></p>
+    <p>
+      Desarrollado por Jenniffer Gonzalez Navia · Datos de
+      <a href="https://dog.ceo/dog-api/" target="_blank">Dog CEO API</a>
+    </p>
   </footer>
 
   <script src="js/app.js"></script>
+
 </body>
 </html>
