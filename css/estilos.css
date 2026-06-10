@@ -47,4 +47,20 @@ header input {
   outline: none;
 }
 
-header input:focus
+header input:focus {
+  outline: 3px solid var(--acc);
+}
+
+main {
+  padding: 2rem;
+}
+
+#cargar {
+  display: block;
+  margin: 0 auto 2rem;
+  padding: 10px 28px;
+  background-color: var(--acc);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1
